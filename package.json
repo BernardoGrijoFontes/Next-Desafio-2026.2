@@ -12,6 +12,7 @@
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.9.1",
     "i": "^0.3.7",
+    "lucide-react": "^1.28.0",
     "next": "16.2.10",
     "npm": "^11.19.0",
     "react": "19.2.7",
