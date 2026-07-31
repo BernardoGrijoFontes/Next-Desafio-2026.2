@@ -9,16 +9,21 @@ const links = [
 export default function Header(){
 
     return (
-        <header className="bg-indigo-950 sticky top-0 z-10 mx-auto w-full py-8 px-4 md:p-0 mb-8">
-            <div className="text-white flex flex-wrap items-center justify-beteween w-full md:w-10/12 mx-auto">
-                <Link href='/' className="flex gap-4 items-center">
-                    <Image src={'/assets/Copilot_20260722_185845.png'}
+        <header className="bg-indigo-950 sticky top-0 z-10 mx-auto w-full py-8 px-4 md:p-0 mb-8 rounded-full">
+            <div className="text-white flex flex-wrap items-center justify-between w-full md:w-10/12 mx-auto rounded-lg">
+                <Link href='/' className="flex gap-4 items-center hover:scale-110">
+                    <Image src={'/assets/Logo_NW.png'}
                     alt="Logo do brechó"
-                    width={904}
-                    height={904}
-                    className="h-20 w-20 rounded-xl"
+                    width={100}
+                    height={100}
                     />   
                 </Link>
+                <div className="flex gap-16 items-center">
+                    <Link href='/' className="font-extrabold hover:scale-110">Produtos</Link>
+                    <Link href='/' className="font-extrabold hover:scale-110">Carrinho</Link>
+                    <Link href='/' className="font-extrabold hover:scale-110">Login</Link>
+                    <Link href='/' className="font-extrabold hover:scale-110">Gerenciamento</Link>
+                </div>
             </div>
         </header>
     )
