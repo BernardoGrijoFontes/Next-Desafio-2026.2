@@ -65,7 +65,7 @@ export default function Mais_vendidos(){
                                 <div className="flex flex-col items-center justify-center gap-4 w-full">
                                     <h1 className="text-[100%] font-extrabold">{produto.nome}</h1>
                                     <h2 className="text-[100%] font-extrabold">{produto.preco}</h2>
-                                    <h1 className="text-[100%] text-black/50 font-extrabold">{produto.descricao}</h1>
+                                    <h1 className="text-[100%] text-black/50 font-extrabold overflow-hidden">{produto.descricao}</h1>
                                     <button className="text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full">Ver mais</button>
                                 </div>
                             </div>
