@@ -1,6 +1,11 @@
+import Hero_section from "../components/hero_section";
+import Mais_vendidos from "../components/mais_vendidos";
 
 export default function Home() {
   return (
-    <h1>Oi</h1>
+    <main>
+      <Hero_section/>
+      <Mais_vendidos/>
+    </main>
   );
 }

@@ -7,9 +7,8 @@ const links = [
 ]
 
 export default function Header(){
-
     return (
-        <header className="bg-indigo-950 sticky top-0 z-10 mx-auto w-full py-8 px-4 md:p-0 mb-8 rounded-full">
+        <header className="bg-[#6271CF] sticky top-0 z-10 mx-auto w-full py-8 px-4 md:p-0 mb-8 rounded-full">
             <div className="text-white flex flex-wrap items-center justify-between w-full md:w-10/12 mx-auto rounded-lg">
                 <Link href='/' className="flex gap-4 items-center hover:scale-110">
                     <Image src={'/assets/Logo_NW.png'}
