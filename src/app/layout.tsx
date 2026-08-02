@@ -23,6 +23,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Next Wear Brechó",
   description: "Um brechó focado em moda rotativa e sustentável",
+  icons: {
+    icon: '/favicon.png'
+  },
 };
 
 export default function RootLayout({

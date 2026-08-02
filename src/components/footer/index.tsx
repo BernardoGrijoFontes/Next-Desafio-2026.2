@@ -15,21 +15,21 @@ export default function Footer() {
             <div className="flex flex-col items-center justify-center gap-2 font-extrabold py-0">
                 <div>Redes sociais:</div>
                 <div className="flex flex-row items-center justify-center gap-4">
-                    <Link href='/'>
+                    <Link href='/' className="hover:scale-105 cursor-pointer duration-75 ease-in-out">
                         <Image src={'/assets/Instagram_logo.png'}
                         alt="Link do Instagram"
                         width={50}
                         height={50}
                         /> 
                     </Link>
-                    <Link href='/'>
+                    <Link href='/' className="hover:scale-105 cursor-pointer duration-75 ease-in-out">
                         <Image src={'/assets/Facebook.png'}
                         alt="Link do Facebook"
                         width={50}
                         height={50}
                         /> 
                     </Link>
-                    <Link href='/'>
+                    <Link href='/' className="hover:scale-105 cursor-pointer duration-75 ease-in-out">
                         <Image src={'/assets/Twitter.png'}
                         alt="Link do X"
                         width={50}

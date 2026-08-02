@@ -55,7 +55,7 @@ export default function Mais_vendidos(){
                 <div className="flex h-full">
                     {produtos.map((produto, index) => (
                         <div key={index} className="basis-1/3 shrink-0 flex justify-center">
-                            <div className="bg-white flex flex-col py-4 px-4 items-center justify-center text-black h-full gap-2 rounded-lg w-[80%]">
+                            <div className="bg-white flex flex-col py-4 px-4 items-center justify-center text-black h-full gap-2 rounded-lg w-[80%] hover:scale-105 cursor-pointer duration-75 ease-in-out">
                                 <Image 
                                 src={produto.imagem}
                                 alt={produto.nome}
@@ -66,7 +66,7 @@ export default function Mais_vendidos(){
                                     <h1 className="text-[100%] font-extrabold">{produto.nome}</h1>
                                     <h2 className="text-[100%] font-extrabold">{produto.preco}</h2>
                                     <h1 className="text-[100%] text-black/50 font-extrabold overflow-hidden">{produto.descricao}</h1>
-                                    <button className="text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full">Ver mais</button>
+                                    <button className="text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full hover:scale-105 cursor-pointer duration-75 ease-in-out">Ver mais</button>
                                 </div>
                             </div>
                         </div>
