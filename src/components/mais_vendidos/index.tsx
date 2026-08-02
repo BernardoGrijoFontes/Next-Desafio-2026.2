@@ -2,12 +2,22 @@
 
 import Image from "next/image"
 import useEmblaCarousel from "embla-carousel-react"
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Mais_vendidos(){
 
-    const [emblaRef] = useEmblaCarousel({
+    const [emblaRef] = useEmblaCarousel(
+        {
         loop: true,
-    });
+        },
+        [
+            Autoplay({
+            delay: 2500, 
+            stopOnInteraction: false,
+            stopOnMouseEnter: true,   
+            }),
+        ]
+    );
 
   const produtos = [
     {
