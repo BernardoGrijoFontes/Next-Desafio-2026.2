@@ -97,7 +97,6 @@ const produtos = [
 export default function ListaDeProdutos(){
     return (
         <div className="flex flex-col items-center justify-center py-8 px-20 gap-8">
-            <h1 className="text-[200%] font-extrabold text-[#6271CF]">Produtos</h1>
             <div className="grid grid-cols-4 w-full gap-16">
                 {produtos.map((produto) => (
                     <div key={produto.id} className="bg-white flex flex-col py-4 px-4 items-center justify-center text-black h-full gap-2 rounded-lg border-2 border-[#6271CF] hover:scale-105 cursor-pointer duration-75 ease-in-out">
