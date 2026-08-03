@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function CarrinhoVazio(){
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="flex flex-col items-center justify-start min-h-screen">
             <Image
             src={'/assets/Imagem_carrinho_vazio.png'}
             alt="Imagem de roupas"
