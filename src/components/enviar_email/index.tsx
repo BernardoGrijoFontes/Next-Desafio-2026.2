@@ -1,7 +1,6 @@
 export default function EnviarEmail(){
     return (
         <div className="flex flex-col py-4 items-center justify-center w-full gap-8">
-            <h1 className="text-[200%] font-extrabold text-[#6271CF]">Contato</h1>
             <form autoComplete="off" className="w-[60%] border-4 border-[#6271CF] rounded-lg bg-[#6271CF]/25">
                 <h1 className="w-full px-4 text-[150%] font-extrabold bg-[#6271CF] text-white">Envie sua mensagem</h1>
                 <div className="flex flex-col w-full h-full items-center justify-center px-8 py-4">
