@@ -7,13 +7,13 @@ export default function Footer() {
             <div className="font-extrabold flex flex-row justify-center items-center gap-2">
                     <Image src={'/assets/Logo_NW.png'}
                     alt="Logo do brechó"
-                    width={50}
-                    height={50}
+                    width={70}
+                    height={70}
                     /> 
-                    <div>Next Wear Brechó</div>
+                    <div className="text-[150%]">Next Wear Brechó</div>
             </div>
             <div className="flex flex-col items-center justify-center gap-2 font-extrabold py-0">
-                <div>Redes sociais:</div>
+                <div  className="text-[150%]">Redes sociais:</div>
                 <div className="flex flex-row items-center justify-center gap-4">
                     <Link href='/' className="hover:scale-105 cursor-pointer duration-75 ease-in-out">
                         <Image src={'/assets/Instagram_logo.png'}
@@ -38,7 +38,7 @@ export default function Footer() {
                     </Link>
                 </div>
             </div>
-            <div className="font-extrabold">© 2026 Next Wear — Todos os direitos reservados</div>
+            <div className="font-extrabold text-[100%]">© 2026 Next Wear — Todos os direitos reservados</div>
         </div>
     )
 }

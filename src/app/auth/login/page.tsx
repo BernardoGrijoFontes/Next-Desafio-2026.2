@@ -1,9 +1,11 @@
-import PaginaLogin from "@/src/components/pagina_login"
+import FormularioLogin from "@/src/components/formulario_login"
+import ImagemAuth from "@/src/components/imagem_auth"
 
 export default function Login(){
     return (
-        <main>
-            <PaginaLogin/>
-        </main>
+        <div className="flex flex-row w-full min-h-screen">
+            <ImagemAuth/>
+            <FormularioLogin/>
+        </div>
     )
 }
