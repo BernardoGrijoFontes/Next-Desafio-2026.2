@@ -3,6 +3,7 @@
 import Image from "next/image"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 export default function Mais_vendidos(){
 
@@ -82,7 +83,7 @@ export default function Mais_vendidos(){
                                     <h1 className="text-[100%] font-extrabold">{produto.nome}</h1>
                                     <h2 className="text-[100%] font-extrabold">{produto.preco}</h2>
                                     <h1 className="text-[100%] text-black/50 font-extrabold overflow-hidden">{produto.descricao}</h1>
-                                    <button className="text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full hover:scale-105 cursor-pointer duration-75 ease-in-out">Ver mais</button>
+                                    <Link href='site/produto' className="flex text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full justify-center items-center hover:scale-105 cursor-pointer duration-75 ease-in-out">Ver mais</Link>
                                 </div>
                             </div>
                         </div>
