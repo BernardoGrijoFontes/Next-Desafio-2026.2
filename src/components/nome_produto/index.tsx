@@ -4,7 +4,7 @@ type NomeProps = {
 
 export default function NomeProduto({nome}: NomeProps){
     return (
-        <h1 className="text-[150%]">
+        <h1 className="text-[200%]">
             {nome}
         </h1>
     )
