@@ -100,6 +100,7 @@ export default function ListaDeProdutos(){
             <div className="grid grid-cols-3 w-full gap-16 justify-items-center">
                 {produtos.map((produto) => (
                     <CardProduto
+                    key={produto.id}
                     nome={produto.nome}
                     preco={produto.preco}
                     descricao={produto.descricao}
