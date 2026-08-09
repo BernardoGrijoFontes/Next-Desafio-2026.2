@@ -1,18 +1,26 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
+import { useState } from "react"
 
 type CardProps = {
     nome: string;
     preco: number;
     descricao: string;
     imagem_um: string;
+    imagem_dois: string;
 }
 
 export default function CardProduto(props: CardProps){
+    const [hover, setHover] = useState(false);
+
     return (
-        <div className="bg-white flex flex-col py-4 px-4 items-center justify-center border-2 border-black/15 text-black h-full gap-2 rounded-lg w-[80%] hover:scale-105 cursor-pointer duration-75 ease-in-out">
+        <div className="bg-white flex flex-col py-4 px-4 items-center justify-center border-2 border-black/15 text-black h-full gap-2 rounded-lg w-[80%] hover:scale-105 cursor-pointer duration-75 ease-in-out"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        >
             <Image 
-            src={props.imagem_um}
+            src={hover ? props.imagem_dois : props.imagem_um}
             alt={props.nome}
             width={200}
             height={200}

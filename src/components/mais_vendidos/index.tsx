@@ -26,6 +26,7 @@ export default function Mais_vendidos(){
     preco: 210.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     },
     {
     id: 2,
@@ -33,6 +34,7 @@ export default function Mais_vendidos(){
     preco: 210.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     },
     {
     id: 3,
@@ -40,6 +42,7 @@ export default function Mais_vendidos(){
     preco: 210.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     },
     {
     id: 4,
@@ -47,6 +50,7 @@ export default function Mais_vendidos(){
     preco: 210.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     },
     {
     id: 5,
@@ -54,6 +58,7 @@ export default function Mais_vendidos(){
     preco: 210.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     },
     {
     id: 6,
@@ -61,6 +66,7 @@ export default function Mais_vendidos(){
     preco: 270.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     }
   ];
 
@@ -76,6 +82,7 @@ export default function Mais_vendidos(){
                             preco={produto.preco}
                             imagem_um={produto.imagem}
                             descricao={produto.descricao}
+                            imagem_dois={produto.imagem_outra}
                             />
                         </div>
                     ))}

@@ -7,6 +7,7 @@ import CardProduto from "../card_produto"
     preco: 150.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     },
     {
     id: 2,
@@ -14,6 +15,7 @@ import CardProduto from "../card_produto"
     preco: 150.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     },
     {
     id: 3,
@@ -21,6 +23,7 @@ import CardProduto from "../card_produto"
     preco: 150.00,
     descricao: "Descrição",
     imagem: "/assets/Logo_NW.png",
+    imagem_outra: "/assets/Facebook.png",
     }
 ]
 
@@ -36,6 +39,7 @@ export default function ProdutosEmDestaque(){
                             imagem_um={produto.imagem}
                             descricao={produto.descricao}
                             preco={produto.preco}
+                            imagem_dois={produto.imagem_outra}
                             />
                         </div>
                     ))}

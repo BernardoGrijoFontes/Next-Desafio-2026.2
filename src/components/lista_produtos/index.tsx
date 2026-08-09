@@ -7,6 +7,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 3,
@@ -21,6 +23,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 4,
@@ -28,6 +31,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 5,
@@ -35,6 +39,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 6,
@@ -42,6 +47,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 7,
@@ -49,6 +55,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 8,
@@ -56,6 +63,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 9,
@@ -63,6 +71,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 10,
@@ -70,6 +79,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 11,
@@ -77,6 +87,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 12,
@@ -84,6 +95,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
     {
         id: 13,
@@ -91,6 +103,7 @@ const produtos = [
         preco: 140.00,
         descricao: "Descrição",
         imagem: "/assets/Logo_NW.png",
+        imagem_outra: "/assets/Facebook.png",
     },
 ];
 
@@ -105,6 +118,7 @@ export default function ListaDeProdutos(){
                     preco={produto.preco}
                     descricao={produto.descricao}
                     imagem_um={produto.imagem}
+                    imagem_dois={produto.imagem_outra}
                     />
                 ))}
             </div>
