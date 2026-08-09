@@ -6,24 +6,24 @@ import CardProduto from "../card_produto"
     nome: "Produto 1",
     preco: 150.00,
     descricao: "Descrição",
-    imagem: "/assets/Logo_NW.png",
-    imagem_outra: "/assets/Facebook.png",
+    imagem: "/assets/Bone_frente.png",
+    imagem_outra: "/assets/Bone_tras.png",
     },
     {
     id: 2,
     nome: "Produto 2",
     preco: 150.00,
     descricao: "Descrição",
-    imagem: "/assets/Logo_NW.png",
-    imagem_outra: "/assets/Facebook.png",
+    imagem: "/assets/Bone_frente.png",
+    imagem_outra: "/assets/Bone_tras.png",
     },
     {
     id: 3,
     nome: "Produto 3",
     preco: 150.00,
     descricao: "Descrição",
-    imagem: "/assets/Logo_NW.png",
-    imagem_outra: "/assets/Facebook.png",
+    imagem: "/assets/Bone_frente.png",
+    imagem_outra: "/assets/Bone_tras.png",
     }
 ]
 
