@@ -25,11 +25,22 @@ async function main() {
     },
   ];
 
-  for (const product of products) {
-    await prisma.produto.create({
-      data: product,
-    });
-  }
+  // for (const product of products) {
+  //   await prisma.produto.create({
+  //     data: product,
+  //   });
+  // }
+
+  const updateDescricao = await prisma.produto.update({
+    where: {
+      id: 1
+    },
+    data: {
+      descricao: "um bone verde bonito"
+    }
+  })
+
+  
 }
 
 main()

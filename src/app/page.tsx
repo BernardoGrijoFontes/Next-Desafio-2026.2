@@ -4,13 +4,15 @@ import Missao from "../components/missao_visao_valores";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import ProdutosEmDestaque from "../components/em_destaque";
+import getEmDestaque from "@/actions/home/actions";
 
-export default function Home() {
+export default async function Home() {
+  const produtos_loja = await getEmDestaque()
   return (
     <main>
       <Header/>
       <Hero_section/>
-      <ProdutosEmDestaque/>
+      <ProdutosEmDestaque produtos={produtos_loja}/>
       <Mais_vendidos/>
       <Missao/>
       <Footer/>
