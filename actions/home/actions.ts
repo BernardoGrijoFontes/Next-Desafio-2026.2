@@ -19,3 +19,35 @@ export default async function getEmDestaque(){
     })
     return produtos;
 }
+
+export async function getMaisVendidos(){
+    const produtos = await prisma.produto.findMany({
+        take: 3,
+        orderBy: {
+            id: "desc"
+        },
+        select: {
+            id: true,
+            foto_dois: true,
+            foto_um: true,
+            preco: true,
+            nome: true,
+            descricao: true
+        }
+    })
+    return produtos;
+}
+
+export async function getProdutos() {
+    const produtos = await prisma.produto.findMany({
+        select: {
+            id: true,
+            foto_um: true,
+            foto_dois: true,
+            preco: true,
+            nome: true,
+            descricao: true
+        }
+    })
+    return produtos;
+}

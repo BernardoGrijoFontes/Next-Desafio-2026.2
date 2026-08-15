@@ -3,8 +3,14 @@
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay";
 import CardProduto from "../card_produto";
+import { getMaisVendidos } from "@/actions/home/actions";
+import { MaisVendidos } from "@/types/home/home";
 
-export default function Mais_vendidos(){
+type MaisVendidosProps = {
+    produtos: MaisVendidos[]
+}
+
+export default function Mais_vendidos({produtos}: MaisVendidosProps){
 
     const [emblaRef] = useEmblaCarousel(
         {
@@ -19,57 +25,6 @@ export default function Mais_vendidos(){
         ]
     );
 
-  const produtos = [
-    {
-    id: 1,
-    nome: "Produto 1",
-    preco: 210.00,
-    descricao: "Descrição",
-    imagem: "/assets/Bone_frente.png",
-    imagem_outra: "/assets/Bone_tras.png",
-    },
-    {
-    id: 2,
-    nome: "Produto 2",
-    preco: 210.00,
-    descricao: "Descrição",
-    imagem: "/assets/Bone_frente.png",
-    imagem_outra: "/assets/Bone_tras.png",
-    },
-    {
-    id: 3,
-    nome: "Produto 3",
-    preco: 210.00,
-    descricao: "Descrição",
-    imagem: "/assets/Bone_frente.png",
-    imagem_outra: "/assets/Bone_tras.png",
-    },
-    {
-    id: 4,
-    nome: "Produto 4",
-    preco: 210.00,
-    descricao: "Descrição",
-    imagem: "/assets/Bone_frente.png",
-    imagem_outra: "/assets/Bone_tras.png",
-    },
-    {
-    id: 5,
-    nome: "Produto 5",
-    preco: 210.00,
-    descricao: "Descrição",
-    imagem: "/assets/Bone_frente.png",
-    imagem_outra: "/assets/Bone_tras.png",
-    },
-    {
-    id: 6,
-    nome: "Produto 6",
-    preco: 270.00,
-    descricao: "Descrição",
-    imagem: "/assets/Bone_frente.png",
-    imagem_outra: "/assets/Bone_tras.png",
-    }
-  ];
-
     return (
         <div className="bg-[#6271CF] w-full h-136 flex flex-col text-white py-4 items-center justify-center">
             <h1 className="text-[200%] font-extrabold">Mais vendidos</h1>
@@ -80,9 +35,9 @@ export default function Mais_vendidos(){
                             <CardProduto 
                             nome={produto.nome}
                             preco={produto.preco}
-                            imagem_um={produto.imagem}
+                            imagem_um={produto.foto_um}
                             descricao={produto.descricao}
-                            imagem_dois={produto.imagem_outra}
+                            imagem_dois={produto.foto_dois}
                             />
                         </div>
                     ))}
