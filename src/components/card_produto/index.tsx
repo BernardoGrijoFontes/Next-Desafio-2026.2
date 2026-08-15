@@ -20,6 +20,7 @@ export default function CardProduto(props: CardProps){
         onMouseLeave={() => setHover(false)}
         >
             <Image 
+            className="w-60 h-60 object-cover"
             src={hover ? props.imagem_dois : props.imagem_um}
             alt={props.nome}
             width={200}
