@@ -51,3 +51,21 @@ export async function getProdutos() {
     })
     return produtos;
 }
+
+export async function getTabela() {
+    const produtos = await prisma.produto.findMany({
+        orderBy: {
+            id: "asc"
+        },
+        select: {
+            id: true,
+            foto_um: true,
+            foto_dois: true,
+            preco: true,
+            nome: true,
+            descricao: true,
+            tamanho: true
+        }
+    })
+    return produtos;
+}

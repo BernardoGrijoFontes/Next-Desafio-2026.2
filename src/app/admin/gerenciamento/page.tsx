@@ -1,6 +1,8 @@
 import Titulo from "@/src/components/titulo"
 import Sidebar from "@/src/components/sidebar"
 import HeaderGerenciamento from "@/src/components/header_gerenciamento"
+import TabelaGerenciamento from "@/src/components/tabela_gerenciamento"
+import Pesquisa from "@/src/components/pesquisa"
 
 export default function Gerenciamento(){
     return (
@@ -8,9 +10,11 @@ export default function Gerenciamento(){
             <div className="flex flex-col min-h-full">
                 <Sidebar/>
             </div>
-            <div className="flex flex-col w-full h-full justify-center items-center">
+            <div className="flex flex-col w-full h-full justify-center items-center gap-4">
                 <HeaderGerenciamento/>
                 <Titulo titulo="Gerenciamento"/>
+                <Pesquisa/>
+                <TabelaGerenciamento/>
             </div>
         </main>
     )
