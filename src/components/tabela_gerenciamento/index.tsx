@@ -1,4 +1,14 @@
-export default function TabelaGerenciamento(){
+import Image from "next/image"
+import { GerenciamentoTabela } from "@/types/home/home"
+import { Pencil } from "lucide-react"
+import { Eye } from "lucide-react"
+import { Trash2 } from "lucide-react"
+
+type GerenciamentoProps = {
+    produtos: GerenciamentoTabela[]
+}
+
+export default function TabelaGerenciamento({produtos}: GerenciamentoProps){
     return (
         <table className="bg-[#6271CF]/25 table-fixed border-separate border-spacing-4 rounded-2xl">
         <thead>
@@ -14,22 +24,39 @@ export default function TabelaGerenciamento(){
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <td>The Sliding Mr. Bones</td>
-            <td>Malcolm Lockyer</td>
-            <td>1961</td>
-            <td  className="max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</td>
-            </tr>
-            <tr>
-            <td>Witchy Woman</td>
-            <td>The Eagles</td>
-            <td>1972</td>
-            </tr>
-            <tr>
-            <td>Shining Star</td>
-            <td>Earth, Wind, and Fire</td>
-            <td>1975</td>
-            </tr>
+
+            {produtos.map((produto, index) => (
+                <tr key={index} className="text-center align-middle">
+                    <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.id}</td>
+                    <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.nome}</td>
+                    <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.preco}</td>
+                    <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.descricao}</td>
+                    <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.tamanho}</td>
+                    <td>
+                        <Image
+                        src={produto.foto_um}
+                        alt={produto.nome}
+                        width={40}
+                        height={40}
+                        />
+                    </td>
+                    <td>
+                        <Image
+                        src={produto.foto_dois}
+                        alt={produto.nome}
+                        width={40}
+                        height={40}
+                        />
+                    </td>
+                    <td>
+                        <div className="flex flex-row justify-center items-center gap-2">
+                            <div><Pencil className="w-5 h-5 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
+                            <div><Eye className="w-6 h-6 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
+                            <div><Trash2 className="w-5 h-5 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
+                        </div>
+                    </td>
+                </tr>
+            ))}
         </tbody>
         </table>
     )

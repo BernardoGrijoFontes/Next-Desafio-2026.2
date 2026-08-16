@@ -3,6 +3,9 @@ import Sidebar from "@/src/components/sidebar"
 import HeaderGerenciamento from "@/src/components/header_gerenciamento"
 import TabelaGerenciamento from "@/src/components/tabela_gerenciamento"
 import Pesquisa from "@/src/components/pesquisa"
+import { getTabela } from "@/actions/home/actions"
+
+const tabela_gerenciamento = await getTabela()
 
 export default function Gerenciamento(){
     return (
@@ -14,7 +17,7 @@ export default function Gerenciamento(){
                 <HeaderGerenciamento/>
                 <Titulo titulo="Gerenciamento"/>
                 <Pesquisa/>
-                <TabelaGerenciamento/>
+                <TabelaGerenciamento produtos={tabela_gerenciamento}/>
             </div>
         </main>
     )

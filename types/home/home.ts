@@ -25,11 +25,12 @@ export type ProdutosTipo = {
     descricao: string
 }
 
-export type Tabela = {
+export type GerenciamentoTabela = {
     id: number,
     foto_dois: string,
     foto_um: string,
     preco: number,
     nome: string,
     descricao: string
+    tamanho: string
 }
