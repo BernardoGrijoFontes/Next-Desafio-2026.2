@@ -30,7 +30,7 @@ export default function TabelaGerenciamento({produtos}: GerenciamentoProps){
                     <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.id}</td>
                     <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.nome}</td>
                     <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.preco}</td>
-                    <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.descricao}</td>
+                    <td className="max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.descricao}</td>
                     <td className="max-w-[100px] overflow-hidden text-ellipsis whitespace-nowrap">{produto.tamanho}</td>
                     <td>
                         <Image
@@ -50,9 +50,9 @@ export default function TabelaGerenciamento({produtos}: GerenciamentoProps){
                     </td>
                     <td>
                         <div className="flex flex-row justify-center items-center gap-2">
-                            <div><Pencil className="w-5 h-5 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
-                            <div><Eye className="w-6 h-6 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
-                            <div><Trash2 className="w-5 h-5 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
+                            <div><Pencil className="w-4 h-4 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
+                            <div><Eye className="w-5 h-5 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
+                            <div><Trash2 className="w-4 h-4 hover:scale-105 cursor-pointer duration-75 ease-in-out"/></div>
                         </div>
                     </td>
                 </tr>

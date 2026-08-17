@@ -4,6 +4,7 @@ import HeaderGerenciamento from "@/src/components/header_gerenciamento"
 import TabelaGerenciamento from "@/src/components/tabela_gerenciamento"
 import Pesquisa from "@/src/components/pesquisa"
 import { getTabela } from "@/actions/home/actions"
+import Paginacao from "@/src/components/paginacao"
 
 const tabela_gerenciamento = await getTabela()
 

@@ -1,6 +1,7 @@
 import ListaDeProdutos from "@/src/components/lista_produtos"
 import Pesquisa from "@/src/components/pesquisa"
 import Titulo from "@/src/components/titulo"
+import Paginacao from "@/src/components/paginacao"
 import { getProdutos } from "@/actions/home/actions"
 
 const produtos_get = await getProdutos()
@@ -11,6 +12,7 @@ export default function Produtos(){
             <Titulo titulo="Produtos"/>
             <Pesquisa/>
             <ListaDeProdutos produtos={produtos_get}/>
+            <Paginacao/>
         </main>
     )
 }
