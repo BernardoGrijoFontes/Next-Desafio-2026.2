@@ -13,11 +13,11 @@ export default function Header(){
                     />   
                 </Link>
                 <div className="flex gap-16 items-center">
-                    <Link href='/site/produtos' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Produtos</Link>
-                    <Link href='/site/contato' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Contato</Link>
+                    <Link href='/produtos' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Produtos</Link>
+                    <Link href='/contato' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Contato</Link>
                     <Link href='/admin/gerenciamento' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Gerenciamento</Link>
                     <Link href='/auth/login' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Login</Link>
-                    <Link href='/site/carrinho' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Carrinho</Link>
+                    <Link href='/carrinho' className="font-extrabold hover:scale-110 duration-75 ease-in-out">Carrinho</Link>
                 </div>
             </div>
         </header>

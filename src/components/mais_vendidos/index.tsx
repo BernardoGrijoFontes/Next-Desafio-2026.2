@@ -33,6 +33,7 @@ export default function Mais_vendidos({produtos}: MaisVendidosProps){
                     {produtos.map((produto, index) => (
                         <div key={index} className="basis-1/3 shrink-0 flex justify-center">
                             <CardProduto 
+                            id={produto.id}
                             nome={produto.nome}
                             preco={produto.preco}
                             imagem_um={produto.foto_um}

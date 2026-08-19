@@ -1,9 +1,13 @@
 import Image from "next/image"
 
-export default function ImagemProdutoIndividual(){
+type ImagemIndividualProps = {
+    foto: string
+}
+
+export default function ImagemProdutoIndividual({foto}: ImagemIndividualProps){
     return (
         <Image 
-        src={'/assets/Logo_NW.png'}
+        src={foto}
         alt="Foto do produto"
         width={400}
         height={400}

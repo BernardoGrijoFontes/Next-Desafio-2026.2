@@ -69,3 +69,12 @@ export async function getTabela() {
     })
     return produtos;
 }
+
+export async function getProduto(id: number){
+    const produto = await prisma.produto.findUnique({
+        where: {
+            id: id
+        }
+    })
+    return produto
+}

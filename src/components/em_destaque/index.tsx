@@ -14,6 +14,7 @@ export default function ProdutosEmDestaque({produtos}: EmDestaqueProps){
                     {produtos.map((produto, index) => (
                         <div key={index} className="flex justify-center">
                             <CardProduto
+                            id={produto.id}
                             nome={produto.nome}
                             imagem_um={produto.foto_um}
                             descricao={produto.descricao}

@@ -12,6 +12,7 @@ export default function ListaDeProdutos({produtos}: ProdutosProps){
                 {produtos.map((produto) => (
                     <CardProduto
                     key={produto.id}
+                    id={produto.id}
                     nome={produto.nome}
                     preco={produto.preco}
                     descricao={produto.descricao}

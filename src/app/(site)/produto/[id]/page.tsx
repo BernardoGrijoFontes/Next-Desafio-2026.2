@@ -4,19 +4,35 @@ import DescricaoProduto from "@/src/components/descricao_produto"
 import NomeProduto from "@/src/components/nome_produto"
 import PrecoProduto from "@/src/components/preco_produto"
 import TamanhoProduto from "@/src/components/tamanho_produto"
+import { getProduto } from "@/actions/home/actions"
 
-export default function Produto(){
+type ProdutoProps = {
+    params: Promise<{
+        id: string
+    }>
+}
+
+export default async function Produto({ params }: ProdutoProps){
+    const { id } = await params
+    const produto = await getProduto(Number(id))
+    if (!produto) {
+        return (
+            <main>
+                <h1>Produto não encontrado</h1>
+            </main>
+        )
+    }
     return (
         <div className="flex flex-col w-full h-full">
             <div className="flex flex-row px-8 py-8 items-center justify-center w-full h-full">
                 <div className="flex flex-col w-full h-full items-center justify-center">
-                    <ImagemProdutoIndividual/>
-                    <DescricaoProduto descricao="bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla "/>
+                    <ImagemProdutoIndividual foto={produto.foto_um}/>
+                    <DescricaoProduto descricao={produto.descricao}/>
                 </div>
                 <div className="flex flex-col w-full h-full items-center justify-center">
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-4">
-                            <NomeProduto nome="Produto"/>
+                            <NomeProduto nome={produto.nome}/>
                             <PrecoProduto preco={120.00}/>
                         </div>
                         <TamanhoProduto tamanho="G"/>
