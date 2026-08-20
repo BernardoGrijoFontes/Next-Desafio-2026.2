@@ -1,6 +1,8 @@
 "use server"
 
 import prisma from "@/src/lib/db"
+import bcrypt from "bcrypt";
+import { redirect } from "next/navigation";
 
 export default async function getEmDestaque(){
     const produtos = await prisma.produto.findMany({
@@ -77,4 +79,33 @@ export async function getProduto(id: number){
         }
     })
     return produto
+}
+
+export async function cadastrar(formData: FormData) {
+
+    const nome = formData.get("nome") as string;
+    const email = formData.get("email") as string;
+    const senha = formData.get("senha") as string;
+
+    const usuarioExiste = await prisma.usuario.findUnique({
+        where: {
+            email: email
+        }
+    });
+
+    if (usuarioExiste) {
+        return;
+    }
+
+    const senhaHash = await bcrypt.hash(senha, 10);
+
+    await prisma.usuario.create({
+        data: {
+            nome: nome,
+            email: email,
+            senha: senhaHash
+        }
+    });
+
+    redirect("/login");
 }
