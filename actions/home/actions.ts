@@ -3,6 +3,7 @@
 import prisma from "@/src/lib/db"
 import bcrypt from "bcrypt";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 export default async function getEmDestaque(){
     const produtos = await prisma.produto.findMany({
@@ -107,5 +108,41 @@ export async function cadastrar(formData: FormData) {
         }
     });
 
-    redirect("/login");
+    redirect("/auth/login");
+}
+
+export async function login(formData: FormData) {
+
+    const email = formData.get("email") as string;
+    const senha = formData.get("senha") as string;
+
+    const usuario = await prisma.usuario.findUnique({
+        where: {
+            email: email
+        }
+    });
+
+    if (!usuario) {
+        redirect("/auth/login");
+    }
+
+    const senhaCorreta = await bcrypt.compare(
+        senha,
+        usuario.senha
+    );
+
+    if (!senhaCorreta) {
+        redirect("/auth/login");
+    }
+
+    const cookieStore = await cookies();
+
+    cookieStore.set("usuarioId", usuario.id.toString(), {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        path: "/"
+    });
+
+    redirect("/");
 }
