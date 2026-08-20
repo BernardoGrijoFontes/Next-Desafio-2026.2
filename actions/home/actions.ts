@@ -146,3 +146,30 @@ export async function login(formData: FormData) {
 
     redirect("/");
 }
+
+export async function getUsuarioLogado() {
+
+    const cookieStore = await cookies();
+
+    const usuarioId = cookieStore.get("usuarioId")?.value;
+
+    if (!usuarioId) {
+        return null;
+    }
+
+    const usuario = await prisma.usuario.findUnique({
+        where: {
+            id: Number(usuarioId)
+        }
+    });
+
+    return usuario;
+}
+
+export async function logout() {
+    const cookieStore = await cookies();
+
+    cookieStore.delete("usuarioId");
+
+    redirect("/");
+}

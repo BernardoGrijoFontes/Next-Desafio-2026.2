@@ -3,6 +3,7 @@ import Image from "next/image"
 import { LogOut } from "lucide-react"
 import { Home } from "lucide-react"
 import { ShoppingBag } from "lucide-react"
+import { logout } from "@/actions/home/actions"
 
 export default function Sidebar(){
     return (
@@ -26,11 +27,15 @@ export default function Sidebar(){
                 height={40}
                 />
             </div>
-            <LogOut 
-            className="text-white"
-            width={40}
-            height={40}
-            />
+            <form action={logout}>
+            <button type="submit">
+                <LogOut 
+                className="text-white"
+                width={40}
+                height={40}
+                />
+            </button>
+            </form>
         </div>
     )
 }
