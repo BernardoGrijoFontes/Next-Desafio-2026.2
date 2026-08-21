@@ -21,6 +21,7 @@ model Produto {
   descricao   String
   preco       Float
   tamanho     String
+  itensCarrinho ItemCarrinho[]
 }
 
 model Usuario {
@@ -28,4 +29,23 @@ model Usuario {
   nome  String
   email String @unique
   senha String
+  carrinho Carrinho?
+}
+
+model Carrinho {
+  id        Int @id @default(autoincrement())
+  usuarioId Int @unique
+
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
+
+  itens ItemCarrinho[]
+}
+
+model ItemCarrinho {
+  id         Int @id @default(autoincrement())
+  carrinhoId Int
+  produtoId  Int
+
+  carrinho Carrinho @relation(fields: [carrinhoId], references: [id])
+  produto  Produto  @relation(fields: [produtoId], references: [id])
 }

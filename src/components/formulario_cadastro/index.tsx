@@ -1,16 +1,28 @@
-import Link from "next/link";
-import { cadastrar } from "@/actions/home/actions";
+"use client";
 
-type FormularioCadastroProps = {
-    setLogin: (valor:boolean) => void
+import { cadastrar } from "@/actions/home/actions";
+import { useState } from "react";
+
+
+type FormularioLoginProps = {
+    setLogin: (valor: boolean) => void
 }
 
-export default function FormularioCadastro({setLogin}: FormularioCadastroProps) {
+
+export default function FormularioCadastro({ setLogin }: FormularioLoginProps) {
+
+    async function fazerCadastro(formData: FormData) {
+        const resultado = await cadastrar(formData);
+
+        if (resultado) {
+            alert(resultado);
+        }
+    }
 
     return (
         <form
             autoComplete="off"
-            action={cadastrar}
+            action={fazerCadastro}
             className="flex flex-col w-full min-h-screen justify-center items-center gap-12"
         >
 

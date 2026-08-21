@@ -18,7 +18,7 @@ export default async function Header(){
                     <Link href='/produtos' className="font-extrabold hover:scale-110 duration-75 ease-in-out cursor-pointer">Produtos</Link>
                     <Link href='/contato' className="font-extrabold hover:scale-110 duration-75 ease-in-out cursor-pointer">Contato</Link>
                     <Link href={usuario?'/admin/gerenciamento':'/'} className="font-extrabold hover:scale-110 duration-75 ease-in-out cursor-pointer">Gerenciamento</Link>
-                    <Link href='/auth/login' className="font-extrabold hover:scale-110 duration-75 ease-in-out cursor-pointer">Login</Link>
+                    <Link href={usuario?'/':'/auth/login'} className="font-extrabold hover:scale-110 duration-75 ease-in-out cursor-pointer">Login</Link>
                     <Link href='/carrinho' className="font-extrabold hover:scale-110 duration-75 ease-in-out cursor-pointer">Carrinho</Link>
                 </div>
             </div>

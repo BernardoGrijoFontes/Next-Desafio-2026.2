@@ -6,11 +6,19 @@ type FormularioLoginProps = {
 }
 
 export default function FormularioLogin({ setLogin }: FormularioLoginProps){
+    async function fazerLogin(formData: FormData) {
+
+        const resultado = await login(formData);
+
+        if (resultado) {
+            alert(resultado);
+        }
+    }
     return (
             <form 
             autoComplete="off"
             className="flex flex-col w-full min-h-screen justify-center items-center gap-12"
-            action={login}>
+            action={fazerLogin}>
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-[200%] text-[#6271CF] font-extrabold">Login</h1>
                     <div className="text-[100%] text-black flex flex-row gap-1">Não possui uma conta?<button type="button" onClick={() => setLogin(false)} className="text-[#6271CF] underline cursor-pointer">Cadastre-se</button></div>

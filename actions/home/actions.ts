@@ -83,7 +83,6 @@ export async function getProduto(id: number){
 }
 
 export async function cadastrar(formData: FormData) {
-
     const nome = formData.get("nome") as string;
     const email = formData.get("email") as string;
     const senha = formData.get("senha") as string;
@@ -95,7 +94,7 @@ export async function cadastrar(formData: FormData) {
     });
 
     if (usuarioExiste) {
-        return;
+        return "Este e-mail já está cadastrado!";
     }
 
     const senhaHash = await bcrypt.hash(senha, 10);
@@ -123,7 +122,7 @@ export async function login(formData: FormData) {
     });
 
     if (!usuario) {
-        redirect("/auth/login");
+        return "E-mail ou senha incorretos!";
     }
 
     const senhaCorreta = await bcrypt.compare(
@@ -132,7 +131,7 @@ export async function login(formData: FormData) {
     );
 
     if (!senhaCorreta) {
-        redirect("/auth/login");
+        return "E-mail ou senha incorretos!";
     }
 
     const cookieStore = await cookies();
