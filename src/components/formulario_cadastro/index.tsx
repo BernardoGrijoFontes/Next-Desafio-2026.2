@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { cadastrar } from "@/actions/home/actions";
 
-export default function FormularioCadastro() {
+type FormularioCadastroProps = {
+    setLogin: (valor:boolean) => void
+}
+
+export default function FormularioCadastro({setLogin}: FormularioCadastroProps) {
 
     return (
         <form
@@ -17,12 +21,13 @@ export default function FormularioCadastro() {
                 <div className="text-[100%] text-black flex flex-row gap-1">
                     Já possui uma conta?
 
-                    <Link
-                        href="/login"
-                        className="text-[#6271CF] underline cursor-pointer"
+                    <button 
+                    type="button" 
+                    onClick={() => setLogin(true)}
+                    className="text-[#6271CF] underline cursor-pointer"
                     >
                         Faça login
-                    </Link>
+                    </button>
                 </div>
             </div>
 

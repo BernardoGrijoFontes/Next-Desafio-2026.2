@@ -1,14 +1,18 @@
 import Link from "next/link"
 import { login } from "@/actions/home/actions"
 
-export default function FormularioLogin(){
+type FormularioLoginProps = {
+    setLogin: (valor: boolean) => void
+}
+
+export default function FormularioLogin({ setLogin }: FormularioLoginProps){
     return (
             <form 
             className="flex flex-col w-full min-h-screen justify-center items-center gap-12"
             action={login}>
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="text-[200%] text-[#6271CF] font-extrabold">Login</h1>
-                    <div className="text-[100%] text-black flex flex-row gap-1">Não possui uma conta?<Link href='/' className="text-[#6271CF] underline cursor-pointer">Cadastre-se</Link></div>
+                    <div className="text-[100%] text-black flex flex-row gap-1">Não possui uma conta?<button type="button" onClick={() => setLogin(false)} className="text-[#6271CF] underline cursor-pointer">Cadastre-se</button></div>
                 </div>
                 <div className="flex flex-col justify-center items-center w-[60%] gap-8">
                     <div className="flex flex-col justify-center w-full">
