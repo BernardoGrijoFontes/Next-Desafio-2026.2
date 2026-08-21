@@ -172,3 +172,59 @@ export async function logout() {
 
     redirect("/");
 }
+
+export async function adicionarAoCarrinho(
+    usuarioId: number,
+    produtoId: number
+) {
+    let carrinho = await prisma.carrinho.findUnique({
+        where: {
+            usuarioId: usuarioId
+        }
+    })
+
+    if (!carrinho) {
+        carrinho = await prisma.carrinho.create({
+            data: {
+                usuarioId: usuarioId
+            }
+        })
+    }
+
+    const itemExistente = await prisma.itemCarrinho.findFirst({
+        where: {
+            carrinhoId: carrinho.id,
+            produtoId: produtoId
+        }
+    })
+
+    if (itemExistente) {
+        return "O item já está no carrinho"
+    }
+
+    await prisma.itemCarrinho.create({
+        data: {
+            carrinhoId: carrinho.id,
+            produtoId: produtoId
+        }
+    })
+    return "Produto adicionado ao carrinho!"
+}
+
+export async function getCarrinho(usuarioId: number) {
+
+    const carrinho = await prisma.carrinho.findUnique({
+        where: {
+            usuarioId: usuarioId
+        },
+        include: {
+            itens: {
+                include: {
+                    produto: true
+                }
+            }
+        }
+    })
+
+    return carrinho
+}

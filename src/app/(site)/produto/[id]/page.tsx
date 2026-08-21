@@ -1,10 +1,11 @@
 import ImagemProdutoIndividual from "@/src/components/imagem_produto_individual"
-import Titulo from "@/src/components/titulo"
 import DescricaoProduto from "@/src/components/descricao_produto"
 import NomeProduto from "@/src/components/nome_produto"
 import PrecoProduto from "@/src/components/preco_produto"
 import TamanhoProduto from "@/src/components/tamanho_produto"
 import { getProduto } from "@/actions/home/actions"
+import { getUsuarioLogado } from "@/actions/home/actions"
+import BotaoCarrinho from "@/src/components/botao_carrinho"
 
 type ProdutoProps = {
     params: Promise<{
@@ -15,6 +16,7 @@ type ProdutoProps = {
 export default async function Produto({ params }: ProdutoProps){
     const { id } = await params
     const produto = await getProduto(Number(id))
+    const usuario = await getUsuarioLogado()
     if (!produto) {
         return (
             <main>
@@ -38,7 +40,7 @@ export default async function Produto({ params }: ProdutoProps){
                             <PrecoProduto preco={120.00}/>
                         </div>
                         <TamanhoProduto tamanho="G"/>
-                        <button className="text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full hover:scale-105 cursor-pointer duration-75 ease-in-out">Adicionar ao carrinho</button>
+                        <BotaoCarrinho usuarioId={usuario?.id} produtoId={produto.id}/>
                     </div>
                 </div>
             </div>
