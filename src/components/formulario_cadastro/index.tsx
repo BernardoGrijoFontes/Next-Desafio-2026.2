@@ -9,6 +9,7 @@ export default function FormularioCadastro({setLogin}: FormularioCadastroProps) 
 
     return (
         <form
+            autoComplete="off"
             action={cadastrar}
             className="flex flex-col w-full min-h-screen justify-center items-center gap-12"
         >

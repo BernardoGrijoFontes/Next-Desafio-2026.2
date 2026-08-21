@@ -27,9 +27,11 @@ export default async function Produto({ params }: ProdutoProps){
             <div className="flex flex-row px-8 py-8 items-center justify-center w-full h-full">
                 <div className="flex flex-col w-full h-full items-center justify-center">
                     <ImagemProdutoIndividual foto={produto.foto_um}/>
-                    <DescricaoProduto descricao={produto.descricao}/>
+                    <div className="flex w-full px-16">
+                        <DescricaoProduto descricao={produto.descricao}/>
+                    </div>
                 </div>
-                <div className="flex flex-col w-full h-full items-center justify-center">
+                <div className="flex flex-col w-full h-full items-center">
                     <div className="flex flex-col gap-8">
                         <div className="flex flex-col gap-4">
                             <NomeProduto nome={produto.nome}/>

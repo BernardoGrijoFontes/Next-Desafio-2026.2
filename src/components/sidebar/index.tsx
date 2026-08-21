@@ -8,7 +8,7 @@ import { logout } from "@/actions/home/actions"
 export default function Sidebar(){
     return (
         <div className="flex flex-col w-full h-full bg-[#6271CF] items-center">
-            <Link href='/' className="flex gap-4 items-center hover:scale-110 duration-75 ease-in-out">
+            <Link href='/' className="flex gap-4 items-center hover:scale-110 duration-75 ease-in-out cursor-pointer">
                 <Image src={'/assets/Logo_NW.png'}
                 alt="Logo do brechó"
                 width={100}
@@ -17,12 +17,12 @@ export default function Sidebar(){
             </Link>
             <div className="flex flex-col gap-8 items-center justify-center h-[75%] py-4">
                 <Home
-                className="text-white"
+                className="text-white hover:scale-110 duration-75 ease-in-out cursor-pointer"
                 width={40}
                 height={40}
                 />
                 <ShoppingBag
-                className="text-white"
+                className="text-white hover:scale-110 duration-75 ease-in-out cursor-pointer"
                 width={40}
                 height={40}
                 />
@@ -30,7 +30,7 @@ export default function Sidebar(){
             <form action={logout}>
             <button type="submit">
                 <LogOut 
-                className="text-white"
+                className="text-white hover:scale-110 duration-75 ease-in-out cursor-pointer"
                 width={40}
                 height={40}
                 />

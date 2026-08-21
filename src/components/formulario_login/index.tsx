@@ -8,6 +8,7 @@ type FormularioLoginProps = {
 export default function FormularioLogin({ setLogin }: FormularioLoginProps){
     return (
             <form 
+            autoComplete="off"
             className="flex flex-col w-full min-h-screen justify-center items-center gap-12"
             action={login}>
                 <div className="flex flex-col justify-center items-center">
