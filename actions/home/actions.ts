@@ -228,3 +228,62 @@ export async function getCarrinho(usuarioId: number) {
 
     return carrinho
 }
+
+export async function criarProduto(formData: FormData) {
+
+    const nome = formData.get("Nome_produto") as string
+    const preco = Number(formData.get("Preco_produto"))
+    const tamanho = formData.get("Tamanho_produto") as string
+    const descricao = formData.get("Descricao_produto") as string
+
+    const foto_um = formData.get("Foto_um_produto") as string
+    const foto_dois = formData.get("Foto_dois_produto") as string
+
+    await prisma.produto.create({
+        data: {
+            nome,
+            preco,
+            tamanho,
+            descricao,
+            foto_um,
+            foto_dois
+        }
+    })
+}
+
+export async function editarProduto(formData: FormData) {
+
+    const id = Number(formData.get("id"))
+
+    const nome = formData.get("Nome_produto") as string
+    const preco = Number(formData.get("Preco_produto"))
+    const tamanho = formData.get("Tamanho_produto") as string
+    const descricao = formData.get("Descricao_produto") as string
+    const foto_um = formData.get("Foto_um_produto") as string
+    const foto_dois = formData.get("Foto_dois_produto") as string
+
+    await prisma.produto.update({
+        where: {
+            id: id
+        },
+        data: {
+            nome: nome,
+            preco: preco,
+            tamanho: tamanho,
+            descricao: descricao,
+            foto_um: foto_um,
+            foto_dois: foto_dois
+        }
+    })
+}
+
+export async function excluirProduto(formData: FormData) {
+
+    const id = Number(formData.get("id"))
+
+    await prisma.produto.delete({
+        where: {
+            id: id
+        }
+    })
+}

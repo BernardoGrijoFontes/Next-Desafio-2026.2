@@ -14,10 +14,9 @@ export default function Gerenciamento(){
             <div className="flex flex-col min-h-full">
                 <Sidebar/>
             </div>
-            <div className="flex flex-col w-full h-full justify-center items-center gap-4">
+            <div className="flex flex-col w-full h-full justify-center items-center gap-4 py-8">
                 <HeaderGerenciamento/>
                 <Titulo titulo="Gerenciamento"/>
-                <Pesquisa/>
                 <TabelaGerenciamento produtos={tabela_gerenciamento}/>
             </div>
         </main>

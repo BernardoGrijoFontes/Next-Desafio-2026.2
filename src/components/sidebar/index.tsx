@@ -16,16 +16,20 @@ export default function Sidebar(){
                 />   
             </Link>
             <div className="flex flex-col gap-8 items-center justify-center h-[75%] py-4">
-                <Home
-                className="text-white hover:scale-110 duration-75 ease-in-out cursor-pointer"
-                width={40}
-                height={40}
-                />
-                <ShoppingBag
-                className="text-white hover:scale-110 duration-75 ease-in-out cursor-pointer"
-                width={40}
-                height={40}
-                />
+                <Link href='/'>
+                    <Home
+                    className="text-white hover:scale-110 duration-75 ease-in-out cursor-pointer"
+                    width={40}
+                    height={40}
+                    />
+                </Link>
+                <Link href='site/produtos'>
+                    <ShoppingBag
+                    className="text-white hover:scale-110 duration-75 ease-in-out cursor-pointer"
+                    width={40}
+                    height={40}
+                    />
+                </Link>
             </div>
             <form action={logout}>
             <button type="submit">

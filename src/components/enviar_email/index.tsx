@@ -96,7 +96,7 @@ export default function EnviarEmail() {
 
                     <button
                         type="submit"
-                        className="text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full hover:scale-102 cursor-pointer"
+                        className="text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full hover:scale-102 cursor-pointer duration-75 ease-in-out"
                     >
                         Enviar mensagem
                     </button>
