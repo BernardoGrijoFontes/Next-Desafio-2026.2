@@ -25,7 +25,7 @@ export default function ModalCriar({
                             name="Foto_um_produto"
                             type="text"
                             className="bg-white border-2 border-[#6271CF] w-full text-lg px-2 rounded-lg"
-                            placeholder="Digite link do cloudify da foto"
+                            placeholder="Digite link do cloudinary da foto"
                             required
                         />
                     </div>
@@ -38,7 +38,7 @@ export default function ModalCriar({
                             name="Foto_dois_produto"
                             type="text"
                             className="bg-white border-2 border-[#6271CF] w-full text-lg px-2 rounded-lg"
-                            placeholder="Digite link do cloudify da foto"
+                            placeholder="Digite link do cloudinary da foto"
                             required
                         />
                     </div>

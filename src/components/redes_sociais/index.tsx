@@ -2,8 +2,8 @@ import Image from "next/image"
 
 export default function RedesSociais(){
     return (
-        <div className="w-full py-4 flex items-center justify-center">
-            <div className="w-[40%] flex flex-col px-4 py-4 justify-center text-white bg-[#6271CF] gap-4 rounded-lg">
+        <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full flex flex-col px-4 py-4 justify-center text-white bg-[#6271CF] gap-4 rounded-lg">
                 <h1 className="text-[150%] font-extrabold">Fale conosco:</h1>
                 <div className="flex flex-row gap-4 px-4 items-center hover:scale-102 cursor-pointer duration-75 ease-in-out">
                     <Image src={'/assets/Instagram_logo.png'}

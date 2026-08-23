@@ -23,7 +23,7 @@ export default function Footer() {
                     width={35}
                     height={20} 
                 /> 
-                <div>(32) 123456789</div>
+                <div>(32)123456789</div>
             </div>
             <div className="flex flex-col items-center justify-center gap-2 font-extrabold py-0">
                 <div  className="text-[125%]">Redes sociais:</div>

@@ -7,9 +7,13 @@ export default function Contato(){
     return (
         <main>
             <Titulo titulo="Contato"/>
-            <EnviarEmail/>
-            <Mapa/>
-            <RedesSociais/>
+            <div className="flex px-16 w-full gap-8 pb-8">
+                <EnviarEmail/>
+                <div className="flex flex-col w-full gap-8 items-center">
+                    <Mapa/>
+                    <RedesSociais/>
+                </div>
+            </div>
         </main>
     )
 }

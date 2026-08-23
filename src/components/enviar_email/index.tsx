@@ -24,12 +24,10 @@ export default function EnviarEmail() {
     }
 
     return (
-        <div className="flex flex-col py-4 items-center justify-center w-full gap-8">
-
             <form
                 onSubmit={enviar}
                 autoComplete="off"
-                className="w-[60%] border-4 border-[#6271CF] rounded-lg bg-[#6271CF]/25"
+                className="w-full border-4 border-[#6271CF] rounded-lg bg-[#6271CF]/25"
             >
 
                 <h1 className="w-full px-4 text-[150%] font-extrabold bg-[#6271CF] text-white">
@@ -87,7 +85,7 @@ export default function EnviarEmail() {
 
                         <textarea
                             name="mensagem_enviar"
-                            rows={8}
+                            rows={2}
                             placeholder="Digite sua mensagem"
                             className="bg-white border-2 border-[#6271CF] w-full text-lg px-2 rounded-lg"
                             required
@@ -103,6 +101,6 @@ export default function EnviarEmail() {
 
                 </div>
             </form>
-        </div>
+
     );
 }

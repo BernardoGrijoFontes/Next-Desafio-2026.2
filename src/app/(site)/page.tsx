@@ -6,6 +6,7 @@ import Footer from "../../components/footer";
 import ProdutosEmDestaque from "../../components/em_destaque";
 import getEmDestaque from "@/actions/home/actions";
 import { getMaisVendidos } from "@/actions/home/actions";
+import BotaoWhatsApp from "@/src/components/botao_whatsapp";
 
 export default async function Home() {
   

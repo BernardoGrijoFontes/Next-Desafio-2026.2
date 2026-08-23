@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
+import BotaoWhatsApp from "../components/botao_whatsapp";
 
 
 const geistSans = Geist({
@@ -35,6 +36,7 @@ export default function RootLayout({
         className={poppins.className}
       >
         {children}
+        <BotaoWhatsApp/>
       </body>
     </html>
   );
