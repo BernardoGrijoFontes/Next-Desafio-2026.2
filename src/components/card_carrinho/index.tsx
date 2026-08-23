@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
 import { Trash2 } from "lucide-react"
+import { removerDoCarrinho } from "@/actions/home/actions"
 
 type CardCarrinhoProps = {
     id: number;
@@ -10,6 +13,10 @@ type CardCarrinhoProps = {
 }
 
 export default function CardCarrinho(props: CardCarrinhoProps){
+    async function remover(id_passado: number){
+        await removerDoCarrinho(id_passado)
+        window.location.reload()
+    }
     return (
         <div className="flex flex-row justify-center items-center gap-12 border-2 border-[#6271CF]/25 py-4 px-4 rounded-lg hover:scale-105 cursor-pointer duration-75 ease-in-out ">
             <Image
@@ -26,7 +33,7 @@ export default function CardCarrinho(props: CardCarrinhoProps){
             </div>
             <div className="flex items-center justify-center rounded-full bg-[#6271CF] py-2 px-2 hover:scale-105 cursor-pointer duration-75 ease-in-out ">
                 <button className="hover: cursor-pointer">
-                    <Trash2 className="text-white"/>
+                    <Trash2 onClick={() => remover(props.id)} className="text-white"/>
                 </button>
             </div>
         </div>

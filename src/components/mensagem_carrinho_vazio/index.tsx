@@ -12,7 +12,7 @@ export default function CarrinhoVazio(){
             />
             <h1 className="text-[150%]">Seu carrinho está vazio...</h1>
             <h1 className="text-[100%]">Quer encontrar sua nova peça favorita?</h1>
-            <Link href='/site/produtos' className="text-[100%] font-extrabold text-[#6271CF] underline cursor-pointer">Venha conferir nossos produtos!</Link>
+            <Link href='/produtos' className="text-[100%] font-extrabold text-[#6271CF] underline cursor-pointer">Venha conferir nossos produtos!</Link>
         </div>
     )
 }

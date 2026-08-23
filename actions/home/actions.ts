@@ -287,3 +287,11 @@ export async function excluirProduto(formData: FormData) {
         }
     })
 }
+
+export async function removerDoCarrinho(id: number) {
+    await prisma.itemCarrinho.delete({
+        where: {
+            id: id
+        }
+    })
+}

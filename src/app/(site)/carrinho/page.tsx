@@ -34,7 +34,7 @@ export default async function Carrinho(){
     return (
         <main>
             <Titulo titulo="Carrinho"/>
-            <div className="flex flex-row w-full h-full px-16">
+            <div className="flex flex-row w-full h-full px-16 pb-8">
                 <div className="flex flex-col gap-4 w-full">
                     {carrinho.itens.map((item, key) => (
                     <CardCarrinho 
