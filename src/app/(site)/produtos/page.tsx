@@ -10,17 +10,26 @@ import { useState } from "react";
 const produtos_get = await getProdutos()
 
 export default function Produtos(){
+
+    const [pages, onChangePages] = useState(1)
+
+    const inicio = (pages - 1) * 9
+    const fim = pages * 9
+
+    const produtosPagina = produtos_get.slice(inicio, fim)
+
     const [query, setQuery] = useState("");
 
-    const filtrados = produtos_get.filter(p =>
+    const filtrados = produtosPagina.filter(p =>
         p.nome.toLowerCase().includes(query.toLowerCase())
     );
+
     return (
         <main>
             <Titulo titulo="Produtos"/>
             <Pesquisa onSearch={setQuery} />
             <ListaDeProdutos produtos={filtrados}/>
-            <Paginacao/>
+            <Paginacao paginaAtual={pages} totalPaginas={Math.ceil(produtos_get.length/9)} onChange={onChangePages}/>
         </main>
     )
 }

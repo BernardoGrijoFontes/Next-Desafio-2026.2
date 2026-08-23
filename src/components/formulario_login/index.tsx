@@ -30,7 +30,7 @@ export default function FormularioLogin({ setLogin }: FormularioLoginProps){
                         name="email"
                         id="email"
                         type="text"
-                        className="bg-white border-2 border-black w-full text-lg px-2 rounded-lg"
+                        className="bg-white border-2 border-[#6271CF]/30 w-full text-lg px-2 rounded-lg"
                         placeholder="Digite seu e-mail"
                         ></input>
                     </div>
@@ -40,7 +40,7 @@ export default function FormularioLogin({ setLogin }: FormularioLoginProps){
                         name="senha"
                         type="password"
                         id="senha"
-                        className="bg-white border-2 border-black w-full text-lg px-2 rounded-lg"
+                        className="bg-white border-2 border-[#6271CF]/30 w-full text-lg px-2 rounded-lg"
                         placeholder="Digite seu e-mail"
                         ></input>
                     </div>

@@ -54,7 +54,7 @@ export default function FormularioCadastro({ setLogin }: FormularioLoginProps) {
                     <input
                         name="nome"
                         type="text"
-                        className="bg-white border-2 border-black w-full text-lg px-2 rounded-lg"
+                        className="bg-white border-2 border-[#6271CF]/30 w-full text-lg px-2 rounded-lg"
                         placeholder="Digite seu nome completo"
                         required
                     />
@@ -68,7 +68,7 @@ export default function FormularioCadastro({ setLogin }: FormularioLoginProps) {
                     <input
                         name="email"
                         type="email"
-                        className="bg-white border-2 border-black w-full text-lg px-2 rounded-lg"
+                        className="bg-white border-2 border-[#6271CF]/30 w-full text-lg px-2 rounded-lg"
                         placeholder="Digite seu e-mail"
                         required
                     />
@@ -82,7 +82,7 @@ export default function FormularioCadastro({ setLogin }: FormularioLoginProps) {
                     <input
                         name="senha"
                         type="password"
-                        className="bg-white border-2 border-black w-full text-lg px-2 rounded-lg"
+                        className="bg-white border-2 border-[#6271CF]/30 w-full text-lg px-2 rounded-lg"
                         placeholder="Digite sua senha"
                         required
                     />

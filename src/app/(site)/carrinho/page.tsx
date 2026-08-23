@@ -3,9 +3,11 @@ import Titulo from "@/src/components/titulo";
 import { getCarrinho } from "@/actions/home/actions";
 import { getUsuarioLogado } from "@/actions/home/actions";
 import CardCarrinho from "@/src/components/card_carrinho";
+import SumarioCarrinho from "@/src/components/sumario_carrinho";
 
 export default async function Carrinho(){
     const usuario = await getUsuarioLogado()
+    var preco_carrinho = 0
 
     if (!usuario) {
         return (
@@ -26,12 +28,14 @@ export default async function Carrinho(){
             </main>
         )
     }
-
+    carrinho.itens.forEach((item) => (
+        preco_carrinho = preco_carrinho + item.produto.preco
+    ))
     return (
         <main>
             <Titulo titulo="Carrinho"/>
             <div className="flex flex-row w-full h-full px-16">
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 w-full">
                     {carrinho.itens.map((item, key) => (
                     <CardCarrinho 
                     nome={item.produto.nome}
@@ -41,6 +45,9 @@ export default async function Carrinho(){
                     tamanho={item.produto.tamanho}
                     preco={item.produto.preco}/>
                     ))}
+                </div>
+                <div className="flex w-full justify-center px-16">
+                    <SumarioCarrinho quantidade={carrinho.itens.length} preco_total={preco_carrinho}/>
                 </div>
             </div>
         </main>

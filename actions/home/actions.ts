@@ -25,7 +25,7 @@ export default async function getEmDestaque(){
 
 export async function getMaisVendidos(){
     const produtos = await prisma.produto.findMany({
-        take: 3,
+        take: 4,
         orderBy: {
             id: "desc"
         },
