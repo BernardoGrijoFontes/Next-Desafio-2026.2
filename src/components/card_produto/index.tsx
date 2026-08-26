@@ -28,9 +28,17 @@ export default function CardProduto(props: CardProps){
             height={200}
             />
             <div className="flex flex-col items-center justify-center gap-4 w-full text-center text-black">
-                <h1 className="text-[100%] w-full overflow-hidden text-ellipsis whitespace-nowrap">{props.nome}</h1>
-                <h2 className="text-[100%] font-extrabold w-full overflow-hidden text-ellipsis whitespace-nowrap">R${props.preco.toFixed(2)}</h2>
-                <h1 className="text-[100%] w-full overflow-hidden text-ellipsis whitespace-nowrap">{props.descricao}</h1>
+                <h1 className="text-[100%] max-w-60 overflow-hidden text-ellipsis whitespace-nowrap">
+                    {props.nome}
+                </h1>
+
+                <h2 className="text-[100%] max-w-40 overflow-hidden text-ellipsis whitespace-nowrap">
+                    R${props.preco.toFixed(2)}
+                </h2>
+
+                <h1 className="text-[100%] max-w-60 overflow-hidden text-ellipsis whitespace-nowrap">
+                    {props.descricao}
+                </h1>
                 <Link href={`/produto/${props.id}`} className="flex text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full justify-center items-center hover:scale-105 cursor-pointer duration-75 ease-in-out">Ver mais</Link>
             </div>
         </div>

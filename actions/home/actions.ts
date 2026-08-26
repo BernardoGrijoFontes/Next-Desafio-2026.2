@@ -4,6 +4,7 @@ import prisma from "@/src/lib/db"
 import bcrypt from "bcrypt";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { revalidatePath } from "next/cache";
 
 export default async function getEmDestaque(){
     const produtos = await prisma.produto.findMany({
@@ -264,15 +265,15 @@ export async function editarProduto(formData: FormData) {
 
     await prisma.produto.update({
         where: {
-            id: id
+            id
         },
         data: {
-            nome: nome,
-            preco: preco,
-            tamanho: tamanho,
-            descricao: descricao,
-            foto_um: foto_um,
-            foto_dois: foto_dois
+            nome,
+            preco,
+            tamanho,
+            descricao,
+            foto_um,
+            foto_dois
         }
     })
 }

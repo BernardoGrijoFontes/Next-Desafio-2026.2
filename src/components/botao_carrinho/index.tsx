@@ -33,7 +33,7 @@ export default function BotaoCarrinho({
     return (
         <button
             onClick={adicionar}
-            className="text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-2 rounded-lg w-full hover:scale-105 cursor-pointer duration-75 ease-in-out"
+            className="max-w-fit text-[100%] text-white bg-[#6271CF] font-extrabold py-2 px-8 rounded-lg hover:scale-105 cursor-pointer duration-75 ease-in-out"
         >
             Adicionar ao carrinho
         </button>
